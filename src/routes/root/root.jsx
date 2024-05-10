@@ -3,10 +3,13 @@ import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 import classes from './root.module.scss';
 
+const telegram = window.Telegram.WebApp;
+
 function Root() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    telegram.ready();
     navigate('/general');
   }, [navigate]);
 

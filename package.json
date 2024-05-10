@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-metamask-avatar": "^2.0.9",
     "react-router-dom": "^6.23.0",
+    "telegraf": "^4.16.3",
     "viem": "2.x",
     "wagmi": "^2.8.1"
   },
