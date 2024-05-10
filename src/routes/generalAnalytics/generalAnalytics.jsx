@@ -8,7 +8,7 @@ import Empty from '../../assets/empty.svg';
 import classes from './generalAnalytics.module.scss';
 
 import CollectionCard from '../../components/collectionCard/collectionCard';
-import axios from '../../axios';
+import custom_axios from '../../axios';
 import WalletCard from '../../components/walletCard/walletCard';
 import CHAINS from '../../constants';
 
@@ -20,16 +20,18 @@ function GeneralAnalytics() {
       {
         queryKey: ['top-collections', chain],
         queryFn: () =>
-          axios.get(`nfts/collections/top_v2?chains=${chain}&limit=50`),
+          custom_axios.get(`nfts/collections/top_v2?chains=${chain}&limit=50`),
       },
       {
         queryKey: ['trending-collections', chain],
         queryFn: () =>
-          axios.get(`nfts/collections/trending?chains=${chain}&limit=50`),
+          custom_axios.get(
+            `nfts/collections/trending?chains=${chain}&limit=50`
+          ),
       },
       {
         queryKey: ['top-wallets', chain],
-        queryFn: () => axios.get(`nfts/top_wallets?chain=${chain}`),
+        queryFn: () => custom_axios.get(`nfts/top_wallets?chain=${chain}`),
       },
     ],
   });

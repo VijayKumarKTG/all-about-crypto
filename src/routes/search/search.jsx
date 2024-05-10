@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import classes from './search.module.scss';
 
-import axios from '../../axios';
+import custom_axios from '../../axios';
 import SearchResult from '../../components/searchResult/searchResult';
 import CHAINS from '../../constants';
 
@@ -18,7 +18,7 @@ function Search() {
       {
         queryKey: ['Search-NFTs', search.address, search.chain],
         queryFn: () =>
-          axios.get(
+          custom_axios.get(
             `nfts/owners?chains=${search.chain}&wallet_addresses=${search.address}&limit=50`
           ),
         enabled: search.address !== null && search.chain !== null,
@@ -26,7 +26,7 @@ function Search() {
       {
         queryKey: ['Search-Collections', search.address, search.chain],
         queryFn: () =>
-          axios.get(
+          custom_axios.get(
             `nfts/collections/${search.chain}/${search.address}?limit=50`
           ),
         enabled: search.address !== null && search.chain !== null,
