@@ -2,7 +2,7 @@ import { Telegraf } from 'telegraf';
 
 const web_link = 'https://all-about-crypto.vercel.app/';
 
-const bot = new Telegraf(import.meta.env.VITE_BOT_ID);
+const bot = new Telegraf('7133580938:AAGzEmUaMqNRg_PpG1piggv5zQtgZx3DfIE');
 
 bot.start((ctx) =>
   ctx.reply('All About NFTs - Learn more about NFTs', {
@@ -11,5 +11,7 @@ bot.start((ctx) =>
     },
   })
 );
+
+bot.command('quit', (ctx) => ctx.reply('See you soon!'));
 
 bot.launch();
