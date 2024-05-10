@@ -1,0 +1,61 @@
+@import '../../styles.scss';
+
+.root {
+  padding: 20px 16px;
+  background-color: $secondary;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h1 {
+  font-size: 24px;
+  color: $primary;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.button {
+  border: 0;
+  padding: 8px 12px;
+  background-color: $accent;
+  color: $primary;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5px;
+  border: 1px solid $accent;
+  border-left: 0;
+  border-right: 0;
+  padding: 24px 0px;
+  margin: 24px 0px;
+
+  a {
+    border: none;
+    width: 50%;
+    font-size: 18px;
+    background-color: $light-primary;
+    color: #000;
+    padding: 12px 0px;
+    text-decoration: none;
+    text-align: center;
+
+    &:first-of-type {
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    &:last-of-type {
+      border-radius: 0px 5px 5px 0px;
+    }
+  }
+}

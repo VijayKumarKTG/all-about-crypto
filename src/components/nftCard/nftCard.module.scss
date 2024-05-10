@@ -1,0 +1,51 @@
+@import '../../styles.scss';
+
+.nftItem {
+  box-shadow: 1px 1px 4px 1px $primary;
+  border-radius: 10px;
+  padding: 16px;
+
+  & > div {
+    position: relative;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  .count {
+    position: absolute;
+    background: $accent;
+    border-radius: 10px 0px 10px 0px;
+    padding: 5px;
+    font-size: 18px;
+    color: $primary;
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 18px;
+    color: $primary;
+    margin-bottom: 10px;
+  }
+
+  .metadata {
+    margin-bottom: 5px;
+
+    span {
+      color: $accent-dark;
+    }
+
+    strong {
+      color: $light-primary;
+    }
+  }
+}

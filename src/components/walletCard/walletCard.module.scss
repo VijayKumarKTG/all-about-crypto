@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+
+.collectionItem {
+  display: flex;
+  column-gap: 16px;
+  box-shadow: 1px 1px 4px 1px $primary;
+  border-radius: 10px;
+  padding: 10px;
+
+  & > div {
+    position: relative;
+  }
+
+  .count {
+    position: absolute;
+    background: $accent;
+    border-radius: 10px 0px 10px 0px;
+    padding: 5px;
+    font-size: 18px;
+    color: $primary;
+    font-weight: bold;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 18px;
+    color: $primary;
+    margin-bottom: 10px;
+  }
+
+  .metadata {
+    margin-bottom: 5px;
+
+    span {
+      color: $accent-dark;
+    }
+
+    strong {
+      color: $light-primary;
+      text-transform: capitalize;
+    }
+  }
+}
