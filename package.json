@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.35.1",
     "@web3modal/wagmi": "^4.1.11",
+    "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-metamask-avatar": "^2.0.9",
