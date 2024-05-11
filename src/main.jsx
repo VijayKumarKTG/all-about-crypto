@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 import GeneralAnalytics from './routes/generalAnalytics/generalAnalytics.jsx';
-// import PersonalAnalytics from './routes/personalAnalytics/personalAnalytics.jsx';
+import PersonalAnalytics from './routes/personalAnalytics/personalAnalytics.jsx';
 import Search from './routes/search/search.jsx';
 import { Web3ModalProvider } from './web3Provider.jsx';
 
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       { path: '/general', element: <GeneralAnalytics /> },
-      // { path: '/personal', element: <PersonalAnalytics /> },
+      { path: '/personal', element: <PersonalAnalytics /> },
       { path: '/search', element: <Search /> },
     ],
   },
