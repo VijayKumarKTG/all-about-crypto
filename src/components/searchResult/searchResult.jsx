@@ -8,7 +8,7 @@ import classes from './searchResult.module.scss';
 import CollectionCard from '../collectionCard/collectionCard';
 import NftCard from '../nftCard/nftCard';
 
-const SearchResult = ({ results }) => {
+const SearchResult = ({ notSearch, results }) => {
   if (
     results &&
     results.length !== 0 &&
@@ -41,7 +41,7 @@ const SearchResult = ({ results }) => {
 
   return (
     <div className={classes.container}>
-      <h4>Search Results</h4>
+      {!notSearch && <h4>Search Results</h4>}
       <section className={classes.section}>
         <h5>NFTs owned by searched Wallet Address</h5>
         {!results[0].data.data.nfts.length ? (
@@ -53,7 +53,7 @@ const SearchResult = ({ results }) => {
           <ul className={classes.list}>
             {results[0].data.data.nfts.map((e, i) => (
               <NftCard
-                key={e.collection_id}
+                key={e.collection_id + String(i)}
                 rank={i + 1}
                 image={e.previews.image_medium_url}
                 name={e.name}
@@ -82,7 +82,7 @@ const SearchResult = ({ results }) => {
           <ul className={classes.list}>
             {results[1].data.data.collections.map((e, i) => (
               <CollectionCard
-                key={e.collection_id}
+                key={e.collection_id + String(i)}
                 rank={i + 1}
                 image={e.collection_details.image_url}
                 name={e.collection_details.name}

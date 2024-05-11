@@ -96,7 +96,7 @@ function GeneralAnalytics() {
           <ul className={classes.list}>
             {results[0].data.data.collections.map((e, i) => (
               <CollectionCard
-                key={e.collection_id}
+                key={e.collection_id + String(i)}
                 rank={i + 1}
                 image={e.collection_details.image_url}
                 name={e.collection_details.name}
@@ -124,7 +124,7 @@ function GeneralAnalytics() {
           <ul className={classes.list}>
             {results[1].data.data.collections.map((e, i) => (
               <CollectionCard
-                key={e.collection_id}
+                key={e.collection_id + String(i)}
                 rank={i + 1}
                 image={e.collection_details.image_url}
                 name={e.collection_details.name}
@@ -152,7 +152,7 @@ function GeneralAnalytics() {
           <ul className={classes.list}>
             {results[2].data.data.top_wallets.map((e) => (
               <WalletCard
-                key={e.address_id}
+                key={e.address_id + String(e.rank)}
                 rank={e.rank}
                 address={e.address_id}
                 tx_count={e.transaction_count}
