@@ -19,11 +19,11 @@ function Root() {
         <h1 className={classes.h1}>
           <Link to='/general'>All About NFTs</Link>
         </h1>
-        {/* <w3m-button /> */}
+        <w3m-button />
       </header>
       <section className={classes.menu}>
-        <Link to='/general'>General Trends</Link>
-        {/* <Link to='/personal'>Personal</Link> */}
+        <Link to='/general'>General</Link>
+        <Link to='/personal'>Personal</Link>
         <Link to='/search'>Search</Link>
       </section>
       <main>

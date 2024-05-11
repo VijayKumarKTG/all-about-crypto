@@ -24,7 +24,7 @@ const WalletCard = ({ rank, address, tx_count, chain }) => {
             }/address/${address}`}
             target='_blank'
             rel='noreferrer'>
-            {address.substring(0, 8)}...{address.substring(36)}
+            {address.substring(0, 4)}...{address.substring(38)}
           </a>
         </h4>
         <div className={classes.metadata}>
